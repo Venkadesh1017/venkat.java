@@ -1,0 +1,41 @@
+*********examle of try catch finally**********
+
+public class Main{
+    public static void main(String args[]){
+        int arr[]={5,10};
+        try{
+            System.out.println(arr[1]);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        finally{
+            System.out.println("Successfully executed");
+        }
+         System.out.println(arr[0]);
+    }
+}
+
+**************Throw Throws Exceptoin************
+class MyExcep extends Exception{
+    MyExcep(String msg){
+        super(msg);
+    }
+}
+public class Main{
+    public static void print(int mark) throws MyExcep{
+        if(mark<35)
+        throw new MyExcep("Konjam Arivu kammiya irukku All the bet for re-attempt");
+        else
+        System.out.println("Congratulatons,you passed");
+    }
+    public static void main(String args[]){
+        try{
+            print(35);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
