@@ -1,0 +1,34 @@
+**********************NODE*******************
+//Package CL
+ class LL{
+     Node start;
+     class Node{
+         int data;
+         Node next;
+         Node(int n){
+             data=n;
+             next=null;
+         }
+     }
+     public void insertBeg(int val){
+         Node NewNode=new Node(val);
+         NewNode.next=start;
+         start=NewNode;
+     }
+     public void display(){
+         Node tptr=start;
+         while(tptr!=null){
+             System.out.print(tptr.data+" ");
+             tptr=tptr.next;
+         }
+     }
+ }
+   public class Main{
+       public static void main(String args[]){
+           LL ob = new LL();
+           ob.insertBeg(10);
+            ob.insertBeg(20);
+            ob.insertBeg(30);
+             System.out.println();
+       }
+   }
